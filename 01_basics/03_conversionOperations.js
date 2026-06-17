@@ -1,4 +1,4 @@
-let score="abc90"
+/*let score="abc90"
 console.log(typeof(score)); // declaring score under parantheses is a method way
 //can also declare it in without parantheses
 let valueInNumber=Number(score)
@@ -20,5 +20,11 @@ console.log(typeof typInNumber);
 console.log(typInNumber); // 1
 let typInString=String(type)
 console.log(typeof typInString);
-console.log(typInString); // true
+console.log(typInString); // true*/
+let num=20//if we keep it empty then false, if we keep a string then true
+console.log(typeof num);
+let numInBoolean=Boolean(num)
+console.log(typeof numInBoolean);
+console.log(numInBoolean); //true
+
 
