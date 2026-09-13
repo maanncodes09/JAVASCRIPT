@@ -1,0 +1,9 @@
+DOM--> DOCUMENT OBJECT MODEL
+Jo document hai woh kese bana hua hai, kya uska model hai, kya structure hai, web page kese dikhega
+
+title.textContent
+title.innerText
+title.innerHTML
+document.querySelector
+document.querySelectorAll --nodelist (maps?)
+HTMLCollection[] vs nodelist
