@@ -1,0 +1,22 @@
+.card-link {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+.card{
+    width:300px;
+    padding:20px;
+    text-align:center;
+    border:1px solid;
+}
+.card img{
+    height:120px;
+    width:120px;
+    border-radius: 50%;
+}
+.follow { display: inline-block; 
+    margin: 15px;
+ } 
+.follow span { 
+    display: block; 
+}

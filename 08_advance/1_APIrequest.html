@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <a href="https://github.com/maanncodes09" target="_blank" class="card-link">
+    <div class="card">
+        <img id="profilePic" src="https://avatars.githubusercontent.com/u/187243075?v=4" alt="githubProfile">
+        <br><br>
+        <!-- <a id="profileLink" href="https://avatars.githubusercontent.com/u/187243075?v=4" target="_blank">My Profile</a> -->
+        <div class="follow">
+            <span>Followers</span>
+            <strong id="followers">2</strong>
+        </div>
+        <div class="follow">
+            <span>Following</span>
+            <strong id="following">3</strong>
+        </div>
+    </div>
+    </a>
+    
+</body>
+<script>
+    const requestUrl='https://api.github.com/users/maanncodes09'
+    // const avatarUrl="https://avatars.githubusercontent.com/u/187243075?v=4"
+    const xhr=new XMLHttpRequest();
+    xhr.open('GET',requestUrl)
+    //xhr.open('GET',avatarUrl)
+    console.log('HERE')
+    xhr.onreadystatechange=function(){
+         console.log(xhr.readyState)
+        if(xhr.readyState===4){
+            // console.log(this.responseText) // bina this lagaye lagega ki current context ki baat nhi ho rahi hai
+            const data=JSON.parse(this.responseText) // convert kr rhe hai, pehle nhi kia tha toh undefined aa rha tha, now it becomes an object
+            console.log(data) // string is the dataype here, jab bhi response aata h url se woh string mei hee aata hai
+            //console.log(data.followers);
+            document.querySelector("#profilePic").src=data.avatar_url;
+            // document.querySelector("#profileLink").href=data.html_url;
+            document.querySelector("#followers").innerText=data.followers;
+            document.querySelector("#following").innerText=data.following;
+        }
+    }
+    xhr.send()
+
+</script>
+</html>
